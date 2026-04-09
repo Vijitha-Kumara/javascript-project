@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <body>
+    <head>
+      <title>Rock Paper Scissors</title>
+    </head>
+    <center>
+      <p>Rock Paper Scissor</p>
+      <button
+        onclick="
+          let computerMove = '';
+          const radomNumber = Math.random();
+          if (radomNumber >= 0 && radomNumber < 1 / 3) {
+            computerMove = 'rock';
+          } else if (radomNumber > 1 / 3 && radomNumber < 2 / 3) {
+            computerMove = 'paper';
+          } else if (radomNumber > 2 / 3 && radomNumber < 1) {
+            computerMove = 'scissors';
+          }
+          let result = '';
+          if (computerMove === 'rock') {
+            result = 'Tie';
+          } else if (computerMove === 'paper') {
+            result = 'You loss';
+          } else if (computerMove === 'scissors') {
+            result = 'You win';
+          }
+          alert(`You picked rock picked ${computerMove} .${result}`);
+        "
+      >
+        Rock
+      </button>
+      <button
+        onclick="
+          let computerMove = '';
+          const radomNumber = Math.random();
+          if (radomNumber >= 0 && radomNumber < 1 / 3) {
+            computerMove = 'rock';
+          } else if (radomNumber > 1 / 3 && radomNumber < 2 / 3) {
+            computerMove = 'paper';
+          } else if (radomNumber > 2 / 3 && radomNumber < 1) {
+            computerMove = 'scissors';
+          }
+          let result = '';
+          if (computerMove === 'rock') {
+            result = 'you loss';
+          } else if (computerMove === 'paper') {
+            result = 'You wind';
+          } else if (computerMove === 'scissors') {
+            result = 'You tie';
+          }
+          alert(`You picked rock picked ${computerMove} .${result}`);
+        "
+      >
+        Paper
+      </button>
+      <button
+        onclick="
+          let computerMove = '';
+          const radomNumber = Math.random();
+          if (radomNumber >= 0 && radomNumber < 1 / 3) {
+            computerMove = 'rock';
+          } else if (radomNumber > 1 / 3 && radomNumber < 2 / 3) {
+            computerMove = 'paper';
+          } else if (radomNumber > 2 / 3 && radomNumber < 1) {
+            computerMove = 'scissors';
+          }
+          let result = '';
+          if (computerMove === 'rock') {
+            result = 'you loss';
+          } else if (computerMove === 'paper') {
+            result = 'You wind';
+          } else if (computerMove === 'scissors') {
+            result = 'You tie';
+          }
+          alert(`You picked rock picked ${computerMove} .${result}`);
+        "
+      >
+        Scissors
+      </button>
+      <script></script>
+    </center>
+  </body>
+</html>
