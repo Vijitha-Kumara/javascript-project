@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <body>
+    <head>
+      <title>Exercises</title>
+    </head>
+    <center>
+      <script>
+        let name = "vijitha";
+        const now = new Date();
+        const hour = now.getHours();
+        let message = "";
+        if (hour > 6 && hour < 12) {
+          message = `Good Morning ${name}!`;
+        } else if (hour > 13 && hour < 17) {
+          message = `Good afternoon ${name}!`;
+        } else {
+          message = `Good night ${name}!`;
+        }
+        console.log(message);
+      </script>
+    </center>
+  </body>
+</html>
