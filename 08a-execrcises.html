@@ -9,6 +9,15 @@
       <button onclick="PlayGame('rock')">Rock</button>
       <button onclick="PlayGame('paper')">Paper</button>
       <button onclick="PlayGame('scissors')">Scissors</button>
+      <button
+        onclick="
+          score.wins = 0;
+          score.losses = 0;
+          score.ties = 0;
+        "
+      >
+        Reset score
+      </button>
       <script>
         const score = {
           wins: 0,
@@ -60,14 +69,16 @@
           }
           if (result === "you win") {
             score.wins += 1;
-          } else if (result === "youl lose") {
+          } else if (result === "you lose") {
             score.losses += 1;
           } else if (result === "Tie") {
             score.ties += 1;
           }
 
           alert(
-            `You picked rock picked ${computerMove} ${result} Wins ${score.wins} losses ${score.losses}  Ties ${score.ties}`,
+            `You picked rock picked ${computerMove} ${result} 
+            Wins: ${score.wins}, losses: ${score.losses},
+            Ties: ${score.ties}`,
           );
 
           return result;
