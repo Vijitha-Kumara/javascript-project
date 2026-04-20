@@ -6,18 +6,58 @@
     </head>
     <center>
       <script>
-        const product = {
-          name: "sock",
-          price: 1090,
+        const product2 = {
+          name: "Shirt",
+          reating: {
+            starts: 455,
+            count: 10,
+          },
+          fun: function function1() {
+            console.log("Funcation  is onme");
+          },
         };
 
-        console.log(product);
-        console.log(product.name);
-        console.log(product.price);
-        product.name = "vijitha";
-        console.log(product);
-        product.newProperyet = true;
-        console.log(product);
+        const obj1 = {
+          message: "Hellow",
+        };
+
+        const obj3 = {
+          message: "Grate Job",
+        };
+
+        const obj2 = obj1;
+        console.log(obj1);
+        console.log(obj2);
+
+        obj2.message = "Vijitha";
+        console.log(obj2);
+
+        const obj4 = {
+          name: "Vijitha",
+          price: 54454,
+        };
+
+        const { name, price } = obj4;
+
+        const obj5 = {
+          message: "Vijitha",
+          method: function fun1() {
+            console.log(message);
+          },
+        };
+
+        console.log(obj1);
+        console.log(obj3 === obj2);
+        console.log(obj2 === obj1);
+        console.log(obj5.method);
+
+        console.log(product2.name);
+        console.log(product2["name"]);
+        console.log(product2.reating.count);
+        console.log(typeof product2.fun);
+        console.log(typeof JSON.stringify(product2));
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
       </script>
     </center>
   </body>
