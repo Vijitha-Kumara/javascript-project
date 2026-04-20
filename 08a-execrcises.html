@@ -14,16 +14,18 @@
           score.wins = 0;
           score.losses = 0;
           score.ties = 0;
+          localStorage.removeItem('score');
         "
       >
         Reset score
       </button>
       <script>
-        const score = {
+        const score = JSON.parse(localStorage.getItem("score")) || {
           wins: 0,
           losses: 0,
           ties: 0,
         };
+
         function radomComputerMove() {
           let computerMove = "";
           const radomNumber = Math.random();
@@ -74,6 +76,7 @@
           } else if (result === "Tie") {
             score.ties += 1;
           }
+          localStorage.setItem("score", JSON.stringify(score));
 
           alert(
             `You picked rock picked ${computerMove} ${result} 
