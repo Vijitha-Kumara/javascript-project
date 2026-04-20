@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <body>
+    <head>
+      <title>Object-exercises-01</title>
+    </head>
+    <center>
+      <script>
+        const product = {
+          name: "basketball",
+          price: "2095 cents",
+        };
+
+        const product1 = {
+          name: "abc",
+          price: 120,
+        };
+        const product2 = {
+          name: "abc",
+          price: 120,
+        };
+
+        product.price = "500 cents";
+        product["delivery-time"] = "3dys";
+        // console.log(product);
+
+        function comparePrice(product1, product2) {
+          if (product1.price < product2.price) {
+            return product1;
+          } else {
+            return product2;
+          }
+        }
+
+        function isSameProduct(product1, product2) {
+          return product1 === product2 ? true : false;
+        }
+
+        function convertString(name) {
+          if (name) {
+            return name.toUpperCase();
+          }
+        }
+
+        function stringRepert(name, num) {
+          console.log(name.repeat(num));
+        }
+
+        console.log(comparePrice(product1, product2));
+        console.log(isSameProduct(product1, product2));
+        stringRepert("test", 5);
+        localStorage.setItem(
+          "data",
+          JSON.stringify(product) ? JSON.stringify(product) : "",
+        );
+        console.log(localStorage.getItem("data"));
+      </script>
+    </center>
+  </body>
+</html>
