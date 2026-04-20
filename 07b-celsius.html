@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <body>
+    <head>
+      <title>Exercises-07a</title>
+    </head>
+    <center>
+      <script>
+        function convertToFahrenheit(celsius) {
+          let fahrenheit = (celsius * 9) / 5 + 32;
+          return fahrenheit;
+        }
+
+        function convertToCelsius(fahrenheit) {
+          let celsius = ((fahrenheit - 32) * 5) / 9;
+
+          return celsius;
+        }
+
+        function convertTemperrature(degree, unit) {
+          let result =
+            unit === "F" ? (degree * 9) / 5 + 32 : ((unit - 32) * 5) / 9;
+          console.log(`${result} ${unit}'`);
+        }
+
+        console.log(convertTemperrature(25, "F"));
+      </script>
+    </center>
+  </body>
+</html>
